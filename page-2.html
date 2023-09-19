@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>3D Library Viewer </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous">
+
+    <!-- Web Components polyfill to support Edge and Firefox < 63 -->
+    <script
+      src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <!-- Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <script
+      src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
+    <!-- Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <script
+      src="https://unpkg.com/resize-observer-polyfill/dist/ResizeObserver.js"></script>
+    <!-- Fullscreen polyfill is needed to fully support AR features -->
+    <script
+      src="https://unpkg.com/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
+    <!-- Include prismatic.js for Magic Leap support -->
+    <script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
+    <!-- focus-visible polyfill removes the focus ring for some input types -->
+    <script
+      src="https://unpkg.com/focus-visible/dist/focus-visible.js"
+      defer></script>
+  </head>
+  <body>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+      }
+    </script>
+
+    <div class="container">
+
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="page-1.html">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+        <li class="page-item"><a class="page-link" href="page-1.html">2</a></li>
+        <li class="page-item"><a class="page-link" href="page-2.html">3</a></li>
+      </ul>
+      
+      <h2>3D Heritage Library</h2>
+
+      <p class="intro">
+        Welcome! This site aims to support museums digital artifact preservation by exploring scanning of museum artifacts 
+        and garments from the museum of childhood and Grantown Museum. On mobile, click on the small cube next to the 3D model and you will be 
+        transported into an Augmented Reality app where you can take pictures with the artifacts!
+      </p>
+      
+
+      </div>
+
+    
+
+    </div>
+
+    <div class="container">
+
+      <!-- Childhood Museum -->
+      <!-- Tizzie-->
+      <div class="row">
+
+        <div class="col-sm-4">
+          <model-viewer class="model" src="assets/models/Tizzie_low.glb"
+            ar ar-modes="scene-viewer webxr quick-look" camera-controls
+            poster="assets/posters/tizzie.png"  shadow-intensity="1">
+            <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+          </model-viewer>
+
+        </div>
+
+        <div class="col-sm-6">
+          <H1>Tissie, c1840</H1>
+          <p>Tissie is a Victorian doll. We think she was made in London, sometime between 1830 and 1850. There are no date marks on Tissie, but we are able to estimate the date she was made by the style of her original dress. The dress worn by Tissie now is a replica that was made by her previous owner, Mrs Angela Kellie, who owned Strathpeffer’s original Doll Museum. 
+            Tissie’s head and shoulders are made of papier-mâché, dipped in wax. Her body is made from cloth, stuffed with sawdust, and her hands and feet are of soft leather. She has brown glass eyes and a head of real human hair. 
+            It is thought that Tissie was first owned by one of the daughters of the Earl and Countess of Cromartie, perhaps their eldest daughter, Florence. Florence’s father was a member of parliament and had an important role in the development of the Highland Railway, and her mother, Anne Sutherland Leveson Gower, became the Mistress of the Robes for Queen Victoria. This was a very important role in the royal household, selecting what clothes the Queen would wear and organising the timetable for the ladies-in-waiting."
+            </p>
+        </div>
+
+      </div>
+
+      <!-- Paddington -->
+      <div class="row">
+
+        <div class="col-sm-4">
+          <model-viewer class="model" src="assets/models/Paddington_Low.glb"
+            ar ar-modes="scene-viewer webxr quick-look" camera-controls
+            poster="assets/posters/paddington.png"  shadow-intensity="1">
+            <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+          </model-viewer>
+
+        </div>
+
+        <div class="col-sm-6">
+          <H1>Paddington Bear, 1981</H1>
+          <p>This Paddington Bear soft toy was made by Gabrielle Designs in 1981. Paddington first appeared in 1958, in the children's book A Bear Called Paddington and has been featured in more than twenty books written by British author Michael Bond. The friendly bear from "Darkest Peru" – with his trademark old hat, duffel coat and love of marmalade – has become a classic character in children's literature and has even been adapted for radio, television, stage, and film. Enjoyed by generations of children, he is a reminder that it is important to be kind, polite, and helpful, even when things go wrong. He is also a reminder that it is okay to be different and that everyone has something special to offer the world.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Doll Dress-->
+      <div class="row">
+
+        <div class="col-sm-4">
+          <model-viewer class="model" src="assets/models/Doll_Dress_Low.glb"
+            ar ar-modes="scene-viewer webxr quick-look" camera-controls
+            poster="assets/posters/dress.png"  shadow-intensity="1">
+            <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+          </model-viewer>
+
+        </div>
+
+        <div class="col-sm-6">
+          <H1>Tissie's Original Dress, c1840</H1>
+          <p>This is Tissie’s original dress. The V-shaped costume is typical of those worn by Victorian ladies during the 1840s and is therefore very helpful in identifying Tissie’s date of manufacture. The dress was probably cream or ivory coloured when Tissie was owned by the Cromartie family. As you can see, it is now brown in colour and too fragile for Tissie to wear. This is due to being exposed to acidic smoke from an open peat fire for decades of her lifetime. 
+            You see, Tissie was owned and loved by two very different families. Originally bought by the wealthy Cromartie family, she was later given, through an act of kindness, to a little girl from a poorer crofting family who had been forced out of their own home during the Highland Clearances and rehomed on land owned by the Cromartie family."
+            </p>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+    <footer class=" text-center ">
+      <div class="text-center p-3" style="background-color: #333333; color:white;">
+        © 2023 Copyright. Made in collaboration with Highlands and Islands Enterprise, RGU and Corrie.dev -
+        <a class="text-white bg-dark" href="https://corrie.dev/">Contact</a>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  </body>
+</html>

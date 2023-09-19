@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>3D Library Viewer </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous">
+
+    <!-- Web Components polyfill to support Edge and Firefox < 63 -->
+    <script
+      src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <!-- Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <script
+      src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
+    <!-- Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <script
+      src="https://unpkg.com/resize-observer-polyfill/dist/ResizeObserver.js"></script>
+    <!-- Fullscreen polyfill is needed to fully support AR features -->
+    <script
+      src="https://unpkg.com/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
+    <!-- Include prismatic.js for Magic Leap support -->
+    <script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
+    <!-- focus-visible polyfill removes the focus ring for some input types -->
+    <script
+      src="https://unpkg.com/focus-visible/dist/focus-visible.js"
+      defer></script>
+  </head>
+  <body>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+      }
+    </script>
+
+    <div class="container">
+
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+        <li class="page-item"><a class="page-link" href="page-1.html">2</a></li>
+        <li class="page-item"><a class="page-link" href="page-2.html">3</a></li>
+        <li class="page-item"><a class="page-link" href="page-1.html">Next</a></li>
+      </ul>
+      
+      <h2>3D Heritage Library</h2>
+
+      <p class="intro">
+        Welcome! This site aims to support museums digital artifact preservation by exploring scanning of museum artifacts 
+        and garments from the museum of childhood and Grantown Museum. On mobile, click on the small cube next to the 3D model and you will be 
+        transported into an Augmented Reality app where you can take pictures with the artifacts!
+      </p>
+      
+
+      </div>
+
+    
+
+    </div>
+
+    <div class="container">
+
+      <!-- Blue Dress -->
+      <div class="row">
+
+        <div class="col-sm-4">
+          <model-viewer class="model"
+            src="assets/models/Blue_Dress.glb"
+            ar ar-modes="scene-viewer webxr quick-look" camera-controls
+            poster="assets/posters/blue.png"  shadow-intensity="1">
+          </model-viewer>
+
+        </div>
+
+        <div class="col-sm-6">
+          <H1>Peacock Frock, 1810</H1>
+          <p>Moving into the regency period which is commonly applied to the years between c. 1795 and 1837, although the official regency for which it is named only spanned the years 1811 to 1820. King George III first suffered debilitating illness in the late 1780s, 
+            and relapsed into his final mental illness in 1810; by the Regency Act 1811, his eldest son George, Prince of Wales, was appointed prince regent to discharge royal functions. </p>
+        </div>
+
+      </div>
+
+      <!-- Victorian Dress -->
+      <div class="row">
+
+        <div class="col-sm-4">
+          <model-viewer class="model" src="assets/models/Victorian_Dress.glb"
+            ar ar-modes="scene-viewer webxr quick-look" camera-controls
+            poster="assets/posters/victorian.png"  shadow-intensity="1">
+          </model-viewer>
+
+        </div>
+
+        <div class="col-sm-6">
+          <H1>Victorian Wedding Dress, 1991</H1>
+          <p>This Victorian ‘bustle’ wedding dress was made for Miss Agnes Helen Gordon on her marriage to Donald MacDougall in 1882. Agnes’s wedding dress is beautifully made, perfectly fitted and the height of fashion for the period. The fitted bodice with a high neckline sits over an elaborate overskirt draped on a bustle with train of cascading ruffles. The Bustle was making a comeback in the 1880s after the large 
+            crinoline skirt had replaced the fashion of the early Victorian era. It was made by gathering the skirt fabric into a ‘bustle’ held over a pad or frame. </p>
+            <p>
+              The wedding dress features in a brilliant online exhibition of Highland Costume <a href="https://highlandthreads.co.uk/">HERE</a>
+            </p>
+        </div>
+
+      </div>
+
+      <!-- Kids Kilt -->
+      <div class="row">
+      
+              <div class="col-sm-4">
+                <model-viewer class="model" src="assets/models/Kids_Kilt_Low.glb"
+                  ar ar-modes="scene-viewer webxr quick-look" camera-controls
+                  poster="assets/posters/kilt.png"  shadow-intensity="1">
+                </model-viewer>
+      
+              </div>
+      
+              <div class="col-sm-6">
+                <H1>Child's Traditional Highland Dress, c1900</H1>
+                <p>This child’s traditional Highland Dress outfit was made by Gardiner & Company of the Scotch House, London, 
+                  possibly in the late 19th or early 20th century. It consists of a woollen tartan kilt and plaid, 
+                  velvet waistcoat and jacket and leather and horsehair sporran. This costume is typical of that worn by boys of wealthy Victorian 
+                  families and would have been kept as ‘best dress’ for special occasions. 
+                </p>
+              </div>
+      
+      </div>
+
+
+
+
+    </div>
+
+    <footer class=" text-center ">
+      <div class="text-center p-3" style="background-color: #333333; color:white;">
+        © 2023 Copyright. Made in collaboration with Highlands and Islands Enterprise, RGU and Corrie.dev -
+        <a class="text-white bg-dark" href="https://corrie.dev/">Contact</a>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  </body>
+</html>

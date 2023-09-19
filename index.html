@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>3D Library Viewer </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous">
+
+    <!-- Web Components polyfill to support Edge and Firefox < 63 -->
+    <script
+      src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <!-- Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <script
+      src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
+    <!-- Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <script
+      src="https://unpkg.com/resize-observer-polyfill/dist/ResizeObserver.js"></script>
+    <!-- Fullscreen polyfill is needed to fully support AR features -->
+    <script
+      src="https://unpkg.com/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
+    <!-- Include prismatic.js for Magic Leap support -->
+    <script src="https://unpkg.com/@magicleap/prismatic/prismatic.min.js"></script>
+    <!-- focus-visible polyfill removes the focus ring for some input types -->
+    <script
+      src="https://unpkg.com/focus-visible/dist/focus-visible.js"
+      defer></script>
+  </head>
+  <body>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js');
+        });
+      }
+    </script>
+
+
+
+
+    <div class="container">
+
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+        <li class="page-item"><a class="page-link" href="page-1.html">2</a></li>
+        <li class="page-item"><a class="page-link" href="page-2.html">3</a></li>
+        <li class="page-item"><a class="page-link" href="page-1.html">Next</a></li>
+      </ul>
+      
+      <h2>3D Heritage Library</h2>
+
+      <p class="intro">
+        Welcome! This site aims to support museums digital artifact preservation by exploring scanning of museum artifacts 
+        and garments from the museum of childhood and Grantown Museum. On mobile, click on the small cube next to the 3D model and you will be 
+        transported into an Augmented Reality app where you can take pictures with the artifacts!
+      </p>
+      
+
+      </div>
+
+    
+
+    </div>
+
+    <div class="container">
+
+      <!-- Grantown Museum -->
+      <!-- Young Victoria-->
+      <div class="row">
+
+        <div class="col-sm-4">
+          <model-viewer class="model"
+            src="assets/models/Young_Victoria_Low_Clean.glb"
+            poster="assets/posters/young.png" 
+            ar ar-modes="scene-viewer webxr quick-look" camera-controls
+             shadow-intensity="1">
+            <div class="progress-bar" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+          </model-viewer>
+
+        </div>
+
+        <div class="col-sm-6">
+          <H1>Robe à la Française, 1882</H1>
+          
+          This gown is a reproduction of a saque (or sack) back gown from the 18th century, also called a robe à la française (French dress). There is a complicated arrangement of pleats on the back of the gown that flows to the floor with a short train. This differs from the British style where eh back is fitted to the body.  The gown is made in silk taffeta , with silk taffeta petticoat, silk brocade stomacher with chemise, corset and panniers underneath. 
+          
+        </div>
+      </div>
+
+      <!-- Fencibles Uniform -->
+      <div class="row">
+
+        <div class="col-sm-4">
+          <model-viewer class="model"
+            src="assets/models/Fencibles_Uniform_Low.glb"
+            ar ar-modes="scene-viewer webxr quick-look" camera-controls
+            poster="assets/posters/Fencibles.png"  shadow-intensity="1">
+          </model-viewer>
+
+        </div>
+
+        <div class="col-sm-6">
+          <H1>Fencibles Uniform, 1799</H1>
+          <p>It was expected that Scottish landowners would raise volunteer fencible units (from the word defencible) for
+            defence against the threat of invasion during the Seven Years' War, the American War of Independence and French Revolutionary Wars in the late 18th 
+            century. Usually temporary units, composed of clan members their role was, 
+            as their name suggests, usually confined to garrison and patrol duties, freeing up the regular Army units to perform offensive operations. </p>
+        </div>
+
+
+      </div>
+
+      <!-- Grant Wedding Dress -->
+      <div class="row">
+
+        <div class="col-sm-4">
+          <model-viewer class="model"
+            src="assets/models/Grant_Wedding_Dress_Low_Clean.glb"
+            ar ar-modes="scene-viewer webxr quick-look" camera-controls
+            poster="assets/posters/grant.png"  shadow-intensity="1">
+          </model-viewer>
+
+        </div>
+
+        <div class="col-sm-6">
+          <H1>Clan Grant Wedding Dress</H1>
+          <p>
+            The Clan Grant Wedding Dress was inspired by the Isabella MacTavish Fraser wedding dress at Inverness Museum and Art Gallery. It is the only 18th century wedding gown in tartan known to exist. Fixed clan tartan didn’t exist in the same way as today, colours and patterns of plaid changed according to a weaver’s design and which plants were available in certain areas. People’s location rather than their clan affiliation decided which tartan was generally worn. 
+            This dress in Grant tartan has a navy linen petticoat and stomacher. The back of the dress is made up of a single rectangle of fabric that has been pleated into the shape of the body.
+            
+
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Christening Gown -->
+      <div class="row">
+
+              <div class="col-sm-4">
+                <model-viewer class="model"
+                  src="assets/models/Christening_Gown_Low_Clean.glb"
+                  ar ar-modes="scene-viewer webxr quick-look" camera-controls
+                  poster="assets/posters/christ.png"  shadow-intensity="1">
+                </model-viewer>
+      
+              </div>
+      
+              <div class="col-sm-6">
+                <H1>Christening Gown, 1899</H1>
+                <p>This christening gown is made from silk and lace. It was donated to the Highland Museum of Childhood by Diana MacDowell and was made by her great-grandmother in 1899 for the christening of Diana’s mother, Eileen May. 
+                  Traditionally, christening gowns have been passed from generation to generation for hundreds of years – for some families, this is an important way of preserving the family's history and faith. 
+                  Diana wore the gown for her christening in 1927 and then her sons, Andrew and Hamish wore it in the 1960s.
+                </p>
+              </div>
+      
+      </div>
+
+
+
+    </div>
+
+    <footer class=" text-center ">
+      <div class="text-center p-3" style="background-color: #333333; color:white;">
+        © 2023 Copyright. Made in collaboration with Highlands and Islands Enterprise, RGU and Corrie.dev -
+        <a class="text-white bg-dark" href="https://corrie.dev/">Contact</a>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  </body>
+</html>
+

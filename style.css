@@ -1,0 +1,51 @@
+@media only screen and (min-width: 1200px) {
+
+  model-viewer {
+    width: 350px;
+    height: 320px;
+  }
+
+}
+
+@media only screen and (min-width: 990px) {
+  model-viewer {
+    padding: 2%;
+    width: 360px;
+    height: 360px;
+    left: 0;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .row .col-sm-6{
+    float: right;
+    }
+}
+
+model-viewer {
+  width: 350px;
+  height: 320px;
+  left: 0;
+}
+
+
+h2 {
+  font-size: 3em !important;
+  font-weight: 600 !important;
+  color: #333333 !important;
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 5%;
+}
+
+
+.pagination {
+  float: right;
+  display: block;
+  padding-top: 6%;
+}
+
+.intro {
+  padding-bottom: 2%;
+}
