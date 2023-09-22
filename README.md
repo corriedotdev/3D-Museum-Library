@@ -1,6 +1,13 @@
-# 3D-Museum-Library
+# "Augmenting Heritage: AR Application"
 
-LINK - https://augmentedfashion.github.io/3D-Museum-Library/
+<div align="center">
+
+[![alt text](https://cdnb.artstation.com/p/assets/images/images/062/910/051/original/corrie-ar-museum.gif)
+
+
+[Link to the website](https://augmentedfashion.github.io/3D-Museum-Library/) | [Link to pre-print]()
+</div>
+
 
 <h2>Task</h2>
 
@@ -37,3 +44,6 @@ FBX2glTF-windows-x64.exe --binary --verbose --khr-materials-unlit --input Blue_D
 <h2>Result</h2>
 
 A small, fast website that allows for 3D artifacts to be displayed on mobile and desktop devices. The AR funtionality on mobile and tablet allows users to place the model in the real world and take photos and videos with it and save directly to their device without having to download an application. 
+
+https://github.com/corriedotdev/3D-Museum-Library/assets/8880520/e6415d57-9676-46e9-824d-3266a7f1a230
+
