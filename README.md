@@ -5,7 +5,7 @@
 [![alt text](https://cdnb.artstation.com/p/assets/images/images/062/910/051/original/corrie-ar-museum.gif)
 
 
-[Link to the website](https://augmentedfashion.github.io/3D-Museum-Library/) | [Link to pre-print]()
+[Link to the website](https://augmentedfashion.github.io/3D-Museum-Library/) | [Link to pre-print](https://arxiv.org/abs/2310.13700)
 </div>
 
 
